@@ -1,0 +1,50 @@
+[
+{
+  "model": "webapp.task",
+  "pk": 7,
+  "fields": {
+    "title": "Отбить стену Мария",
+    "description": "                Собрать все отряды и в срочном порядке отвоевать самую важную стену для человечества",
+    "status": "В процессе",
+    "ended_at": "2023-10-25T00:00:00Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 8,
+  "fields": {
+    "title": "Придумать задачу",
+    "description": "В аттракторе дали дз, борьба с титанами это конечно важно, но нельзя спасать человечество с несделанной домашкой",
+    "status": "Новая",
+    "ended_at": "2023-12-21T00:00:00Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 9,
+  "fields": {
+    "title": "Заменить Леви",
+    "description": "                Взять лучшего воина МИФИ, Аиду, и поставить на пост Леви. Новые взгляды на развитие разведкопуса дожны дать плоды.",
+    "status": "Новая",
+    "ended_at": "2022-11-10T00:00:00Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$fcmYZTwMz9mxMWOIIovWXn$qRAYSuCs10TIdjwmJ4XZPwJIG2WL7HQTLFhsT9M8DbM=",
+    "last_login": "2023-02-16T04:52:35.871Z",
+    "is_superuser": true,
+    "username": "gleb",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-02-15T18:47:56.147Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

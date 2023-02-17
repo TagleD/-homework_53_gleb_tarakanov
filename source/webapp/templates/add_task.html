@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Добавление задачи</title>
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="{% static 'images/clan.jpg' %}" alt="Logo" width="30" height="30"
+                     class="d-inline-block align-text-top">
+                Scouting
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Домой</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tasks">Список задач</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Добавить задачу</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container main-container">
+    <form action="/tasks/add" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col">
+                <h2 class="add-h2 padding-left">Добавление задачи разведкорпусу</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <label for="title" class="form-label padding-left padding-top">Введите заголовок</label>
+                <input type="text" id="title" name="title" class="form-control padding-left"
+                       placeholder="Отбить стену Роза">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <label for="description" class="form-label padding-left padding-top">Введите описание</label>
+                <textarea name="description" id="description" cols="30" rows="10" class="form-control padding-left">
+                </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <label for="disabledSelect" class="form-label padding-left padding-top">Выберите статус задачи</label>
+                <select id="disabledSelect" class="form-select padding-left" name="status">
+                    {% for choice in choices %}
+                        <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <label for="date" class="form-label padding-left padding-top">Введите дату формата "YYYY-mm-dd"</label>
+                <input type="text" id="date" name="date" class="form-control padding-left" placeholder="2019-12-19">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button type="submit" class="btn btn-primary padding-left padding-top">Добавить</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+</html>

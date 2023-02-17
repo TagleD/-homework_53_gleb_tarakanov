@@ -1,0 +1,41 @@
+
+body {
+    background: url("/static/images/back.jpg") #fc0;
+    background-position: top left;
+    background-size: cover;
+}
+
+.main-container {
+    background: white;
+    height: 1200px;
+    max-width: 86%;
+}
+
+h2 {
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+button {
+    max-width: 97px;
+}
+
+.add-h2 {
+    margin: 20px 0;
+}
+
+.padding-left {
+    margin-left: 40px;
+}
+
+.padding-left-tasks {
+    padding-left: 40px;
+}
+
+.padding-left-tasks-h2 {
+    padding-left: 30px;
+}
+
+.padding-top {
+    margin-top: 10px;
+}
