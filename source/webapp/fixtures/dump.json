@@ -4,7 +4,7 @@
   "pk": 7,
   "fields": {
     "title": "Отбить стену Мария",
-    "description": "Собрать все отряды и в срочном порядке отвоевать самую важную стену для человечества",
+    "description": "                Собрать все отряды и в срочном порядке отвоевать самую важную стену для человечества",
     "detailed_description": "Собрать все боеприпасы, которые лежат на складе",
     "status": "В процессе",
     "ended_at": "2023-10-25T00:00:00Z"
@@ -26,28 +26,21 @@
   "pk": 9,
   "fields": {
     "title": "Заменить Леви",
-    "description": "Взять лучшего воина МИФИ, Аиду, и поставить на пост Леви. Новые взгляды на развитие разведкопуса дожны дать плоды.",
+    "description": "                Взять лучшего воина МИФИ, Аиду, и поставить на пост Леви. Новые взгляды на развитие разведкопуса дожны дать плоды.",
     "detailed_description": "Молодежь наступает на пятки",
     "status": "Новая",
     "ended_at": "2022-11-10T00:00:00Z"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 1,
+  "model": "webapp.task",
+  "pk": 16,
   "fields": {
-    "password": "pbkdf2_sha256$390000$fcmYZTwMz9mxMWOIIovWXn$qRAYSuCs10TIdjwmJ4XZPwJIG2WL7HQTLFhsT9M8DbM=",
-    "last_login": "2023-02-16T04:52:35.871Z",
-    "is_superuser": true,
-    "username": "gleb",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2023-02-15T18:47:56.147Z",
-    "groups": [],
-    "user_permissions": []
+    "title": "Сделать домашку номер 53",
+    "description": " Шаблонизатор, именованные url.",
+    "detailed_description": "Нужно применить знания, полученные на уроке.",
+    "status": "Сделано",
+    "ended_at": "2023-05-12T00:00:00Z"
   }
 }
 ]
