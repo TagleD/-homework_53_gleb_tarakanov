@@ -1,8 +1,5 @@
 from django.core.handlers.wsgi import WSGIRequest
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse
-
 from webapp.db import DataBase
 from webapp.models import Task
 
@@ -13,11 +10,6 @@ def tasks_view(request):
     }
     return render(request, 'tasks.html', context=context)
 
-# def detail_view(request):
-#     task_pk = request.GET.get('pk')
-#     task = Task.objects.get(pk=task_pk)
-#     context = {'task': task}
-#     return render(request, 'task_detail.html', context=context)
 
 def detail_view(request, pk):
     task = get_object_or_404(Task, pk=pk)
